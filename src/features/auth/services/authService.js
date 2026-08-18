@@ -8,7 +8,13 @@ import api from '../../../services/api'
  */
 export const login = async (email, password) => {
   const response = await api.post('/auth/login', { email, password })
-  return response.data
+  const { access_token, role } = response.data
+
+  // Transform backend response to match frontend expectations
+  return {
+    token: access_token,
+    user: { role },
+  }
 }
 
 /**
