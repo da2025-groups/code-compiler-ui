@@ -40,7 +40,14 @@ function AppRoutes() {
       {/* Public routes */}
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/playground" element={<PlaygroundPage />} />
+      <Route
+        path="/playground"
+        element={
+          <ProtectedLayout>
+            <PlaygroundPage />
+          </ProtectedLayout>
+        }
+      />
 
       {/* Protected routes (student + admin) */}
       <Route
