@@ -1,12 +1,10 @@
-import { Typography } from '@mui/material'
+import { useParams } from 'react-router-dom'
+import QuestionForm from '../../features/admin/questions/components/QuestionForm'
 
 function AdminQuestionEditPage() {
-  return (
-    <div>
-      <Typography variant="h4">Edit Question</Typography>
-      <Typography>Implementation: CC-20</Typography>
-    </div>
-  )
+  const { id } = useParams()
+
+  return <QuestionForm mode="edit" questionId={id} />
 }
 
 export default AdminQuestionEditPage

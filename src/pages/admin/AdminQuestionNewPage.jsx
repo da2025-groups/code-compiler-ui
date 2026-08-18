@@ -1,12 +1,7 @@
-import { Typography } from '@mui/material'
+import QuestionForm from '../../features/admin/questions/components/QuestionForm'
 
 function AdminQuestionNewPage() {
-  return (
-    <div>
-      <Typography variant="h4">Create Question</Typography>
-      <Typography>Implementation: CC-20</Typography>
-    </div>
-  )
+  return <QuestionForm mode="create" />
 }
 
 export default AdminQuestionNewPage
