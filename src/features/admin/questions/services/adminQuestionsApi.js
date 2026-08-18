@@ -28,7 +28,7 @@ export const getQuestionForEdit = async (questionId) => {
  * @returns {Promise<Object>} Created question object with id
  */
 export const createQuestion = async (data) => {
-  const response = await api.post('/questions', data)
+  const response = await api.post('/admin/questions', data)
   return response.data
 }
 
@@ -40,6 +40,6 @@ export const createQuestion = async (data) => {
  * @returns {Promise<Object>} Updated question object
  */
 export const updateQuestion = async (questionId, data) => {
-  const response = await api.put(`/questions/${questionId}`, data)
+  const response = await api.put(`/admin/questions/${questionId}`, data)
   return response.data
 }
