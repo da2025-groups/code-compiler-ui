@@ -17,7 +17,7 @@ export const getAdminQuestions = async () => {
  * @returns {Promise<Object>} Question object: { id, title, description, difficulty, constraints, sample_input, sample_output, test_cases, created_at }
  */
 export const getQuestionForEdit = async (questionId) => {
-  const response = await api.get(`/questions/${questionId}`)
+  const response = await api.get(`/admin/questions/${questionId}`)
   return response.data
 }
 
