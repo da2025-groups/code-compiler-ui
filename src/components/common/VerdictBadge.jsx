@@ -11,6 +11,7 @@ function VerdictBadge({ status }) {
       case 'success':
         return { label: 'Accepted', color: 'success' }
       case 'error':
+      case 'runtime_error':
         return { label: 'Runtime Error', color: 'error' }
       case 'timeout':
         return { label: 'Time Limit Exceeded', color: 'warning' }
@@ -25,7 +26,7 @@ function VerdictBadge({ status }) {
 }
 
 VerdictBadge.propTypes = {
-  status: PropTypes.oneOf(['success', 'error', 'timeout']).isRequired,
+  status: PropTypes.oneOf(['success', 'error', 'runtime_error', 'timeout']).isRequired,
 }
 
 export default VerdictBadge

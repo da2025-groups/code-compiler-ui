@@ -105,7 +105,7 @@ OutputPanel.propTypes = {
   stdout: PropTypes.string,
   stderr: PropTypes.string,
   executionTime: PropTypes.number,
-  status: PropTypes.oneOf(['success', 'error', 'timeout']),
+  status: PropTypes.oneOf(['success', 'error', 'runtime_error', 'timeout']),
 }
 
 OutputPanel.defaultProps = {
