@@ -12,6 +12,7 @@ Copy and paste these solutions into the Code Compiler Platform to demonstrate th
 
 ```python
 import sys
+import json
 
 # Read input
 input_data = sys.stdin.read().strip()
@@ -30,7 +31,7 @@ for i, num in enumerate(nums):
     complement = target - num
     if complement in seen:
         result = [seen[complement], i]
-        print(result)
+        print(json.dumps(result, separators=(',', ':')))  # outputs [0,1] not [0, 1]
         break
     seen[num] = i
 ```
