@@ -5,26 +5,30 @@ paginate: true
 style: |
   section {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0d1117;
-    color: #e6edf3;
+    background: #ffffff;
+    color: #111827;
   }
-  h1 { color: #58a6ff; font-size: 2rem; margin-bottom: 0.3em; }
-  h2 { color: #58a6ff; font-size: 1.5rem; }
-  h3 { color: #79c0ff; font-size: 1.1rem; }
+  h1 { color: #4f46e5; font-size: 2rem; margin-bottom: 0.3em; }
+  h2 { color: #4f46e5; font-size: 1.5rem; }
+  h3 { color: #3730a3; font-size: 1.1rem; }
   table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-  th { background: #161b22; color: #58a6ff; padding: 8px 12px; }
-  td { padding: 6px 12px; border-bottom: 1px solid #30363d; }
-  tr:hover td { background: #161b22; }
-  code { background: #161b22; color: #79c0ff; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
-  pre { background: #161b22; padding: 16px; border-radius: 8px; font-size: 0.78em; }
-  .green { color: #3fb950; }
-  .red { color: #f85149; }
-  .yellow { color: #d29922; }
-  .blue { color: #58a6ff; }
-  footer { color: #8b949e; font-size: 0.75em; }
-  section.cover h1 { font-size: 2.6rem; text-align: center; }
-  section.cover h2 { text-align: center; color: #8b949e; font-size: 1.1rem; font-weight: normal; }
-  section.cover p { text-align: center; color: #8b949e; margin-top: 3em; }
+  th { background: #4f46e5; color: #ffffff; padding: 8px 12px; }
+  td { padding: 6px 12px; border-bottom: 1px solid #e5e7eb; color: #111827; }
+  tr:nth-child(even) td { background: #f5f3ff; }
+  code { background: #ede9fe; color: #3730a3; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+  pre { background: #1e1b4b; color: #e0e7ff; padding: 16px; border-radius: 8px; font-size: 0.78em; }
+  pre code { background: transparent; color: #e0e7ff; padding: 0; }
+  .green { color: #166534; }
+  .red { color: #991b1b; }
+  .yellow { color: #92400e; }
+  .blue { color: #4f46e5; }
+  footer { color: #6b7280; font-size: 0.75em; }
+  section.cover { background: #4f46e5; color: #ffffff; }
+  section.cover h1 { font-size: 2.6rem; text-align: center; color: #ffffff; }
+  section.cover h2 { text-align: center; color: #c7d2fe; font-size: 1.1rem; font-weight: normal; }
+  section.cover h3 { text-align: center; color: #c7d2fe; }
+  section.cover p { text-align: center; color: #c7d2fe; margin-top: 3em; }
+  section[data-marpit-pagination]::after { color: #6b7280; }
 ---
 
 <!-- _class: cover -->
@@ -360,7 +364,7 @@ make frontend-dev # http://localhost:5173
 
 ### Code Compiler Platform — Project #10
 
-**Team:** dagroups02
+**Team:** Bala Vardhan Palli and Team
 
 **Repos:**
 - Frontend: `code-compiler-ui`
