@@ -8,12 +8,14 @@ import PropTypes from 'prop-types'
 function VerdictBadge({ status }) {
   const getStatusConfig = (status) => {
     switch (status) {
+      case 'accepted':
       case 'success':
         return { label: 'Accepted', color: 'success' }
       case 'error':
       case 'runtime_error':
         return { label: 'Runtime Error', color: 'error' }
       case 'timeout':
+      case 'time_limit_exceeded':
         return { label: 'Time Limit Exceeded', color: 'warning' }
       default:
         return { label: 'Unknown', color: 'default' }
@@ -26,7 +28,7 @@ function VerdictBadge({ status }) {
 }
 
 VerdictBadge.propTypes = {
-  status: PropTypes.oneOf(['success', 'error', 'runtime_error', 'timeout']).isRequired,
+  status: PropTypes.oneOf(['accepted', 'success', 'error', 'runtime_error', 'timeout', 'time_limit_exceeded']).isRequired,
 }
 
 export default VerdictBadge
